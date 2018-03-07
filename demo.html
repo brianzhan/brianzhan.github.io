@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Start Marketing</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+<script src="js/jquery.isotope.js" type="text/javascript"></script> 
+</head>
+<body>
+
+<h1></h1>
+ 
+<div class="filters">
+  <label class="pull-left">Tracking: </label>
+  <div class="filter">
+  </div>
+
+  <div class="btn-group" data-toggle="buttons" data-filter-group="tracking">
+    <button class="btn btn-default is-checked" data-filter="">Any</button>
+    <button class="btn btn-default" data-filter=".tracking-website">Website Tracking</button>
+    <button class="btn btn-default" data-filter=".tracking-visitor">Visitor Tracking</button>
+    <button class="btn btn-default" data-filter=".tracking-video">Video Tracking</button>
+    <button class="btn btn-default" data-filter=".tracking-conversion">Conversion Tracking</button>
+    <button class="btn btn-default" data-filter=".tracking-leads">Leads Tracking</button>
+    <button class="btn btn-default" data-filter=".tracking-ab">A/B Testing</button>
+    <button class="btn btn-default" data-filter=".tracking-activity">Activity Monitoring</button>
+    <button class="btn btn-default" data-filter=".tracking-realtime">Real Time Tracking</button>
+
+    
+  </div>
+
+  <br>
+  <br>
+
+  <label class="pull-left">Campaign Optimization: </label>
+  <div class="filter1"></div>
+
+  <div class="btn-group is-checked" data-toggle="buttons" data-filter-group="optimization">
+    <button class="btn btn-default" data-filter="">Any
+    </button>
+    <button class="btn btn-default" data-filter=".channel">Channel Management
+    </button>
+    <button class="btn btn-default" data-filter=".contact">Contact Database
+    </button>
+    <button class="btn btn-default" data-filter=".email">Email Marketing
+    </button>
+    <button class="btn btn-default" data-filter=".lead">Lead Management
+    </button>
+    <button class="btn btn-default" data-filter=".multi">Multi Campaign
+    </button>
+  </div>
+</div>
+
+<div id="isotope-container">
+  <div class="col-sm-3 item tracking-website tracking-conversion tracking-visitor tracking-leads email contact channel lead">
+    <img src="C:\Users\shanestockall\Downloads\demo-isotope\images\marketo.jpg" height=300 width=300>
+    <h3>Marketo</h3>
+    <p>High cost, high reward</p>
+  </div>
+  <div class="col-sm-3 item tracking-website tracking-ab tracking-activity contact email">
+    <img src="C:\Users\shanestockall\Downloads\demo-isotope\images\acton.png" height=300 width=500>
+    <h3>Act-On</h3>
+    <p>Easy to learn, limited functionality</p>
+  </div>
+  <div class="col-sm-3 item tracking-realtime tracking-leads tracking-video tracking-website multi email">
+    <img src="C:\Users\shanestockall\Downloads\demo-isotope\images\buzzbuilder.jpg" height=300 width=500>
+    <h3>BuzzBuilder</h3>
+    <p>The in-between option</p>
+  </div>
+  <div class="col-sm-3 item tracking-visitor tracking-website tracking-activity channel email">
+    <img src="C:\Users\shanestockall\Downloads\demo-isotope\images\leadsius.png" height=300 width=300>
+    <h3>Leadsius</h3>
+    <p>On-demand model means useful sophistication</p>
+  </div>
+</div>
+ 
+<script type="text/javascript">
+
+// external js: isotope.pkgd.js
+
+  // init Isotope
+  var $container = $('#isotope-container').isotope({
+    transitionDuration: '1s',
+    itemSelector: '.item'
+      //layoutMode: 'fitRows'
+  });
+
+// store filter for each group
+var filters = {};
+
+$('.filters').on( 'click', '.btn', function() {
+  var $this = $(this);
+  // get group key
+  var $buttonGroup = $this.parents('.btn-group');
+  var filterGroup = $buttonGroup.attr('data-filter-group');
+  // set filter for group
+  filters[ filterGroup ] = $this.attr('data-filter');
+  // combine filters
+  var filterValue = concatValues( filters );
+  // set filter for Isotope
+  $container.isotope({ filter: filterValue });
+});
+
+// change is-checked class on buttons
+$('.btn-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+  
+// flatten object by concatting values
+function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
+
+</script>
+ 
+</body>
+</html>

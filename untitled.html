@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <title>Start Marketing</title><!-- Bootstrap Core CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript">
+    </script>
+    <script src="/js/isotope.pkgd.min.js">
+    </script>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"><!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'><!-- Theme CSS -->
+    <link href="css/agency.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript">
+    </script>
+    <script src="js/jquery.isotope.js" type="text/javascript">
+    </script><!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+      <![endif]-->
+</head>
+<body class="index" id="page-top">
+    <style>
+         /* Popup container */
+
+         /* inline styling is not mainstream enough */
+         /*a:hover {*/
+            /*background-color: yellow;*/
+         /*}*/
+
+         /* The actual popup (appears on top) */
+
+         /* relevant styles */
+         .img_wrap {
+            position: relative;
+            height: 165px;
+            width:160px;
+
+         }
+
+         .img_description {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: whitesmoke;
+            color: black;
+            visibility: hidden;
+            opacity: 0;
+
+            /* transition effect. not necessary */
+            transition: opacity .2s, visibility .2s;
+         }
+
+         .img_wrap:hover .img_description {
+            visibility: visible;
+            opacity: 1;
+         }
+
+         .arrow-right {
+           width: 0; 
+           height: 0; 
+           border-top: 60px solid transparent;
+           border-bottom: 60px solid transparent;
+           
+           border-left: 60px solid yellow;
+         }
+
+
+
+         /* Add animation (fade in the popup) */
+         @-webkit-keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+         }
+
+         @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity:1 ;}
+         }
+
+    </style>
+    <script>
+          function popupFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+          }
+
+    </script> <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="mainNav">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i></button> <a class="navbar-brand page-scroll" href="#page-top">Start Marketing</a>
+            </div><!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!--    <li class="hidden">
+                     <a href="#page-top"></a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#services">Campaign Launch</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#portfolio">Tracking</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#about">Optimization</a>
+                  </li>
+                  <li>
+                     <a class="page-scroll" href="#team">Insights</a>
+                  </li> -->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav><!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading" style="font-size: 35px">
+                    Tracking<span class="arrow-right"></span> Lead Generation <span class="arrow-right"></span> Analytics
+                </div><a class="page-scroll btn btn-xl" href="#services">Let's Get Started!</a>
+            </div>
+        </div>
+    </header><!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <!-- FIRST SECTION: QUESTIONS ABOUT YOUR ORGANIZATION  -->
+                <div class="pull-left" style="font-size:30px">
+                    Questions about your organization
+                </div><br>
+                <br>
+                <br>
+                <a class="page-scroll btn btn-xl" href="#tracking-section">Skip to: Questions About Tracking</a><br>
+                <br>
+                <br>
+                <label class="pull-left">How familiar is your staff with the use of marketing technology?</label>
+                <div class="filter1"></div><br>
+                <br>
+                <div class="btn-group is-checked" data-filter-group="marketingmaturity" data-toggle="buttons">
+                    <button class="btn btn-default is-checked active" data-filter="">Any</button> <button class="btn btn-default" data-filter=".maturity-diff">Familiar</button> <button class="btn btn-default" data-filter=".maturity-easy">Less familiar</button>
+                </div><br>
+                <br>
+                <label class="pull-left">Do you have an IT team that's able to handle a more advanced technical integration?</label>
+                <div class="filter1"></div><br>
+                <br>
+                <div class="btn-group is-checked" data-filter-group="technical" data-toggle="buttons">
+                    <button class="btn btn-default is-checked active" data-filter="">Any</button> <button class="btn btn-default" data-filter=".integration-high">Our IT team can handle anything!</button> <button class="btn btn-default" data-filter=".integration-medium">We can rely on our IT team</button> <button class="btn btn-default" data-filter=".integration-low">We don't have an IT team</button>
+                </div><br>
+                <br>
+                <label class="pull-left">Do you require a free trial prior to purchasing a new marketing technology?</label>
+                <div class="filter1"></div><br>
+                <br>
+                <div class="btn-group is-checked" data-filter-group="freetrial" data-toggle="buttons">
+                    <button class="btn btn-default is-checked active" data-filter="">Any</button> <button class="btn btn-default" data-filter=".freetrial-yes">Yes</button> <button class="btn btn-default" data-filter=".freetrial-no">No</button>
+                </div><br>
+                <br>
+                <br>
+                <label class="pull-left">Are there any tools that are currently part of your existing marketing stack? List them here.</label><br>
+                <br>
+                <div class="col-lg-3" style="padding-left:0px;">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="Search for..." type="text"> <span class="input-group-btn"><button class="btn btn-secondary" type="button"><span class="input-group-btn"><span class="input-group-btn">Enter!</span></span></button></span>
+                    </div>
+                </div><br>
+                <br>
+                <section id="tracking-section" style="padding-top: 50px; padding-bottom: 50px;">
+                    <!-- SECOND QUESTION: QUESTIONS ABOUT CATEGORY/COST -->
+                    <div class="pull-left" style="font-size:30px">
+                        Tracking
+                    </div><br>
+                    <br>
+                    <br>
+                    <a class="page-scroll btn btn-xl" href="#leadgen-section">Skip to: Questions About Lead Generation</a><br>
+                    <br>
+                    <br>
+                    <div class="filters">
+                        <label class="pull-left">How large a budget is your team willing to set aside for a tracking tool?</label>
+                        <div class="filter1"></div><br>
+                        <br>
+                        <div class="btn-group is-checked" data-filter-group="Cost" data-toggle="buttons">
+                            <button class="btn btn-default is-checked active" data-filter="">Any</button> <button class="btn btn-default" data-filter=".cost-high">High</button> <button class="btn btn-default" data-filter=".cost-medium">Medium</button> <button class="btn btn-default" data-filter=".cost-low">Low</button>
+                        </div><br>
+                        <br>
+                        <label class="pull-left">Tracking:</label>
+                        <div class="filter"></div><br>
+                        <div class="btn-group" data-filter-group="tracking" data-toggle="buttons" style="margin-left:-60px">
+                            <br>
+                            <button class="btn btn-default is-checked active" data-filter="">Any</button> <!--<button class="btn btn-default" data-filter=".tracking-website">Visitor Tracking</button>-->
+                             <button class="btn btn-default" data-filter=".tracking-visitor">Visitor Tracking</button> <button class="btn btn-default" data-filter=".tracking-video">Video Tracking</button> <button class="btn btn-default" data-filter=".tracking-conversion">Conversion Tracking</button> <!--<button class="btn btn-default" data-filter=".tracking-leads">Leads Tracking</button>-->
+                             <button class="btn btn-default" data-filter=".tracking-ab">A/B Testing</button> <!--<button class="btn btn-default" data-filter=".tracking-activity">Activity Monitoring</button>-->
+                             <button class="btn btn-default" data-filter=".tracking-realtime">Real Time Tracking</button> <button class="btn btn-default" data-filter=".tracking-email">Email Tracking</button>
+                        </div><br>
+                        <br>
+                    </div><br>
+                <br>
+                <div id="isotope-container">
+                    <div class="col-sm-4 item tracking-website tracking-conversion tracking-visitor tracking-leads email contact channel lead cost-high maturity-diff freetrial-yes freetrial-yes">
+                        <!--<a href="https://www.marketo.com/" STYLE="text-decoration:none" target="_blank">-->
+                        <div class="img_wrap">
+                            <img class="image" height="150" src="./images/marketo.jpg" width="150">
+                            <p class="img_description"><a href="./companies/Marketo.html">Click here to learn more.</a></p>
+                        </div>
+                        <h3>Marketo</h3>
+                        <p>High cost, high reward</p>
+                    </div>
+                    <div class="col-sm-4 item tracking-website tracking-ab tracking-activity contact email cost-high maturity-easy freetrial-no">
+                        <div class="img_wrap">
+                            <img class="image" height="150" src="./images/acton.png" width="150">
+                            <p class="img_description">Click here to learn more.</p>
+                        </div>
+                        <h3>Act-On</h3>
+                        <p>Easy to learn, limited functionality</p>
+                    </div>
+                    <div class="col-sm-4 item tracking-realtime tracking-leads tracking-video tracking-website multi email cost-medium maturity-easy freetrial-no">
+                        <div class="img_wrap">
+                            <img class="image" height="150" src="./images/buzzbuilder.jpg" width="150">
+                            <p class="img_description">Click here to learn more.</p>
+                        </div>
+                        <h3>BuzzBuilder</h3>
+                        <p>The in-between option</p>
+                    </div>
+
+                </div>
+                </section>
+
+                <section id="leadgen-section" style="padding-top: 50px; padding-bottom: 50px;">
+                    <!-- SECOND QUESTION: QUESTIONS ABOUT CATEGORY/COST -->
+                    <div class="pull-left" style="font-size:30px">
+                        Lead Generation
+                    </div><br>
+                    <br>
+                    <br>
+                    <a class="page-scroll btn btn-xl" href="#leadgen-section">Skip to: Questions About Analytics</a><br>
+                    <br>
+                    <br>
+                    <div class="filters1">
+                        <label class="pull-left">How large a budget is your team willing to set aside for a lead generation tool?</label>
+                        <div class="filter1"></div><br>
+                        <br>
+                        <div class="btn-group is-checked" data-filter-group="Cost" data-toggle="buttons">
+                            <button class="btn btn-default is-checked active" data-filter="">Any</button> <button class="btn btn-default" data-filter=".cost-high">High</button> <button class="btn btn-default" data-filter=".cost-medium">Medium</button> <button class="btn btn-default" data-filter=".cost-low">Low</button>
+                        </div><br>
+                        <br>
+                        <br>
+                        <label class="pull-left">Types of Lead Generation</label>
+                        <div class="filter"></div><br>
+                        <div class="btn-group" data-filter-group="lead-generation" data-toggle="buttons" style="display:block;">
+                            <br>
+                            <button class="btn btn-default is-checked active" data-filter="">Any</button> <!--<button class="btn btn-default" data-filter=".tracking-website">Visitor Tracking</button>-->
+                             <button class="btn btn-default" data-filter=".lead-nurturing">Lead Nurturing</button> <button class="btn btn-default" data-filter=".lead-generation">Lead Generation</button> <button class="btn btn-default" data-filter=".lead-scoring">Lead Scoring</button> <button class="btn btn-default" data-filter=".lead-response">Lead Response</button>
+                        </div><br>
+                        <br>
+                    </div>
+                </section>
+                </div>
+                <div id="isotope-container1">
+                    <div class="col-sm-4 item tracking-website tracking-conversion tracking-visitor tracking-leads email contact channel lead cost-high maturity-diff freetrial-yes freetrial-yes">
+                        <!--<a href="https://www.marketo.com/" STYLE="text-decoration:none" target="_blank">-->
+                        <div class="img_wrap">
+                            <img class="image" height="150" src="./images/marketo.jpg" width="150">
+                            <p class="img_description"><a href="./companies/Marketo.html">Click here to learn more.</a></p>
+                        </div>
+                        <h3>Marketo</h3>
+                        <p>High cost, high reward</p>
+                    </div>
+                    <div class="col-sm-4 item tracking-website tracking-ab tracking-activity contact email cost-high maturity-easy freetrial-no">
+                        <div class="img_wrap">
+                            <img class="image" height="150" src="./images/acton.png" width="150">
+                            <p class="img_description">Click here to learn more.</p>
+                        </div>
+                        <h3>Act-On</h3>
+                        <p>Easy to learn, limited functionality</p>
+                    </div>
+                    <div class="col-sm-4 item tracking-realtime tracking-leads tracking-video tracking-website multi email cost-medium maturity-easy freetrial-no">
+                        <div class="img_wrap">
+                            <img class="image" height="150" src="./images/buzzbuilder.jpg" width="150">
+                            <p class="img_description">Click here to learn more.</p>
+                        </div>
+                        <h3>BuzzBuilder</h3>
+                        <p>The in-between option</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br>
+    <br>
+    <script type="text/javascript">
+                  // external js: isotope.pkgd.js
+                  
+                    // init Isotope
+                    var $container = $('#isotope-container').isotope({
+                      transitionDuration: '1s',
+                      itemSelector: '.item'
+                        //layoutMode: 'fitRows'
+                    });
+                  
+                  // store filter for each group
+                  var filters = {};
+                  
+                  $('.filters').on( 'click', '.btn', function() {
+                    var $this = $(this);
+                    // get group key
+                    var $buttonGroup = $this.parents('.btn-group');
+                    var filterGroup = $buttonGroup.attr('data-filter-group');
+                    // set filter for group
+                    filters[ filterGroup ] = $this.attr('data-filter');
+                    // combine filters
+                    var filterValue = concatValues( filters );
+                    // set filter for Isotope
+                    $container.isotope({ filter: filterValue });
+                  });
+                  
+                  // change is-checked class on buttons
+                  $('.btn-group').each( function( i, buttonGroup ) {
+                    var $buttonGroup = $( buttonGroup );
+                    $buttonGroup.on( 'click', 'button', function() {
+                      $buttonGroup.find('.is-checked').removeClass('is-checked');
+                      $buttonGroup.find('.active').removeClass('active');
+                      $( this ).addClass('is-checked');
+                      $( this ).addClass('active');
+                    });
+                  });
+                    
+                  // flatten object by concatting values
+                  function concatValues( obj ) {
+                    var value = '';
+                    for ( var prop in obj ) {
+                      value += obj[ prop ];
+                    }
+                    return value;
+                  }
+                  
+    </script> 
+    <script type="text/javascript">
+                  // external js: isotope.pkgd.js
+                  
+                    // init Isotope
+                    var $container = $('#isotope-container1').isotope({
+                      transitionDuration: '1s',
+                      itemSelector: '.item'
+                        //layoutMode: 'fitRows'
+                    });
+                  
+                  // store filter for each group
+                  var filters = {};
+                  
+                  $('.filters1').on( 'click', '.btn', function() {
+                    var $this = $(this);
+                    // get group key
+                    var $buttonGroup = $this.parents('.btn-group');
+                    var filterGroup = $buttonGroup.attr('data-filter-group');
+                    // set filter for group
+                    filters[ filterGroup ] = $this.attr('data-filter');
+                    // combine filters
+                    var filterValue = concatValues( filters );
+                    // set filter for Isotope
+                    $container.isotope({ filter: filterValue });
+                  });
+                  
+                  // change is-checked class on buttons
+                  $('.btn-group').each( function( i, buttonGroup ) {
+                    var $buttonGroup = $( buttonGroup );
+                    $buttonGroup.on( 'click', 'button', function() {
+                      $buttonGroup.find('.is-checked').removeClass('is-checked');
+                      $buttonGroup.find('.active').removeClass('active');
+                      $( this ).addClass('is-checked');
+                      $( this ).addClass('active');
+                    });
+                  });
+                    
+                  // flatten object by concatting values
+                  function concatValues( obj ) {
+                    var value = '';
+                    for ( var prop in obj ) {
+                      value += obj[ prop ];
+                    }
+                    return value;
+                  }
+                  
+    </script>
+    <section id="results" style="padding-top: 50px; padding-bottom: 50px;">
+        <div class="container">
+            <div class="row">
+                <!-- FIRST SECTION: QUESTIONS ABOUT YOUR ORGANIZATION  -->
+                <div class="pull-left" style="font-size:30px">
+                    Results
+                </div><br>
+                <br>
+                <br>
+                <a class="page-scroll btn btn-xl" href="./myrec.html">See Results</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Start Marketing 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li>
+                            <a href="#">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js">
+    </script> <!-- Bootstrap Core JavaScript -->
+     
+    <script src="vendor/bootstrap/js/bootstrap.min.js">
+    </script> <!-- Plugin JavaScript -->
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
+    </script> <!-- Contact Form JavaScript -->
+     
+    <script src="js/jqBootstrapValidation.js">
+    </script> 
+    <script src="js/contact_me.js">
+    </script> <!-- Theme JavaScript -->
+     
+    <script src="js/agency.min.js">
+    </script>
+</body>
+</html>
